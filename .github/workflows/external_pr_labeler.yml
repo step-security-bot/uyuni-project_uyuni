@@ -5,6 +5,9 @@ on:
     types:
       - opened
 
+permissions:
+  contents: read
+
 jobs:
   label_prs:
     name: Label external PRs
@@ -12,9 +15,14 @@ jobs:
     permissions:
       pull-requests: write
     steps:
+      - name: Harden the runner (Audit all outbound calls)
+        uses: step-security/harden-runner@58077d3c7e43986b6b15fba718e8ea69e387dfcc # v2.15.1
+        with:
+          egress-policy: audit
+
       - id: generate-token
         name: Generate an access token
-        uses: actions/create-github-app-token@v2
+        uses: actions/create-github-app-token@29824e69f54612133e76f7eaac726eef6c875baf # v2.2.1
         with:
           app-id: ${{ vars.EXTERNAL_PR_LABELER_APP_ID }}
           private-key: ${{ secrets.EXTERNAL_PR_LABELER_PK }}

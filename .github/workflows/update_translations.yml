@@ -23,12 +23,23 @@ on:
       - 'client/rhel/mgr-daemon/po/*.po'
       - 'client/rhel/spacewalk-client-tools/po/*.po'
 
+permissions:
+  contents: read
+
 jobs:
  run:
+   permissions:
+     actions: write  # for styfle/cancel-workflow-action to cancel/stop running workflows
+     contents: write  # for Git to git push
    name: Update translation files
    if: github.repository == 'uyuni-project/uyuni'
    runs-on: ubuntu-latest
    steps:
+   - name: Harden the runner (Audit all outbound calls)
+     uses: step-security/harden-runner@58077d3c7e43986b6b15fba718e8ea69e387dfcc # v2.15.1
+     with:
+       egress-policy: audit
+
    - name: Cancel Previous Runs
      uses: styfle/cancel-workflow-action@85880fa0301c86cca9da44039ee3bb12d3bedbfa #v0.12.1
      with:

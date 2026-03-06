@@ -16,3 +16,328 @@ updates:
     ignore:
       - dependency-name: "*"
         update-types: ["version-update:semver-patch"]  # Ignore patch updates
+
+  - package-ecosystem: docker
+    directory: /.devcontainer/dev
+    schedule:
+      interval: daily
+
+  - package-ecosystem: docker
+    directory: /.devcontainer/test
+    schedule:
+      interval: daily
+
+  - package-ecosystem: docker
+    directory: /containers/proxy-httpd-image
+    schedule:
+      interval: daily
+
+  - package-ecosystem: docker
+    directory: /containers/proxy-salt-broker-image
+    schedule:
+      interval: daily
+
+  - package-ecosystem: docker
+    directory: /containers/proxy-squid-image
+    schedule:
+      interval: daily
+
+  - package-ecosystem: docker
+    directory: /containers/proxy-ssh-image
+    schedule:
+      interval: daily
+
+  - package-ecosystem: docker
+    directory: /containers/proxy-tftpd-image
+    schedule:
+      interval: daily
+
+  - package-ecosystem: docker
+    directory: /containers/server-attestation-image
+    schedule:
+      interval: daily
+
+  - package-ecosystem: docker
+    directory: /containers/server-database-migration-image
+    schedule:
+      interval: daily
+
+  - package-ecosystem: docker
+    directory: /containers/server-hub-xmlrpc-api-image
+    schedule:
+      interval: daily
+
+  - package-ecosystem: docker
+    directory: /containers/server-image
+    schedule:
+      interval: daily
+
+  - package-ecosystem: docker
+    directory: /containers/server-postgresql-image
+    schedule:
+      interval: daily
+
+  - package-ecosystem: docker
+    directory: /containers/server-saline-image
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: daily
+
+  - package-ecosystem: docker
+    directory: /python/linting
+    schedule:
+      interval: daily
+
+  - package-ecosystem: bundler
+    directory: /testsuite
+    schedule:
+      interval: daily
+
+  - package-ecosystem: docker
+    directory: /testsuite/dockerfiles/buildhost
+    schedule:
+      interval: daily
+
+  - package-ecosystem: docker
+    directory: /testsuite/dockerfiles/controller-dev
+    schedule:
+      interval: daily
+
+  - package-ecosystem: docker
+    directory: /testsuite/dockerfiles/fakeipmi
+    schedule:
+      interval: daily
+
+  - package-ecosystem: docker
+    directory: /testsuite/dockerfiles/opensuse-minion
+    schedule:
+      interval: daily
+
+  - package-ecosystem: docker
+    directory: /testsuite/dockerfiles/opensuse/leap/15.5
+    schedule:
+      interval: daily
+
+  - package-ecosystem: docker
+    directory: /testsuite/dockerfiles/opensuse/leap/15.6
+    schedule:
+      interval: daily
+
+  - package-ecosystem: docker
+    directory: /testsuite/dockerfiles/opensuse/tumbleweed
+    schedule:
+      interval: daily
+
+  - package-ecosystem: docker
+    directory: /testsuite/dockerfiles/postgresql
+    schedule:
+      interval: daily
+
+  - package-ecosystem: docker
+    directory: /testsuite/dockerfiles/redis
+    schedule:
+      interval: daily
+
+  - package-ecosystem: docker
+    directory: /testsuite/dockerfiles/rocky-minion
+    schedule:
+      interval: daily
+
+  - package-ecosystem: docker
+    directory: /testsuite/dockerfiles/server-all-in-one-dev
+    schedule:
+      interval: daily
+
+  - package-ecosystem: docker
+    directory: /testsuite/dockerfiles/ubuntu-minion
+    schedule:
+      interval: daily
+
+  - package-ecosystem: docker
+    directory: /testsuite/dockerfiles/uyuni-master-testsuite
+    schedule:
+      interval: daily
+
+  - package-ecosystem: pip
+    directory: /testsuite/ext-tools/predictive-test-selection
+    schedule:
+      interval: daily
+
+  - package-ecosystem: docker
+    directory: /testsuite/features/profiles/Docker
+    schedule:
+      interval: daily
+
+  - package-ecosystem: docker
+    directory: /testsuite/features/profiles/Docker/authprofile
+    schedule:
+      interval: daily
+
+  - package-ecosystem: docker
+    directory: /testsuite/features/profiles/Docker/serverhost
+    schedule:
+      interval: daily
+
+  - package-ecosystem: docker
+    directory: /testsuite/features/profiles/cloud_aws/Docker
+    schedule:
+      interval: daily
+
+  - package-ecosystem: docker
+    directory: /testsuite/features/profiles/cloud_aws/Docker/authprofile
+    schedule:
+      interval: daily
+
+  - package-ecosystem: docker
+    directory: /testsuite/features/profiles/cloud_aws/Docker/serverhost
+    schedule:
+      interval: daily
+
+  - package-ecosystem: docker
+    directory: /testsuite/features/profiles/github_runner/Docker
+    schedule:
+      interval: daily
+
+  - package-ecosystem: docker
+    directory: /testsuite/features/profiles/github_runner/Docker/authprofile
+    schedule:
+      interval: daily
+
+  - package-ecosystem: docker
+    directory: /testsuite/features/profiles/github_runner/Docker/serverhost
+    schedule:
+      interval: daily
+
+  - package-ecosystem: docker
+    directory: /testsuite/features/profiles/internal_nue/Docker
+    schedule:
+      interval: daily
+
+  - package-ecosystem: docker
+    directory: /testsuite/features/profiles/internal_nue/Docker/authprofile
+    schedule:
+      interval: daily
+
+  - package-ecosystem: docker
+    directory: /testsuite/features/profiles/internal_nue/Docker/serverhost
+    schedule:
+      interval: daily
+
+  - package-ecosystem: docker
+    directory: /testsuite/features/profiles/internal_slc/Docker
+    schedule:
+      interval: daily
+
+  - package-ecosystem: docker
+    directory: /testsuite/features/profiles/internal_slc/Docker/authprofile
+    schedule:
+      interval: daily
+
+  - package-ecosystem: docker
+    directory: /testsuite/features/profiles/internal_slc/Docker/serverhost
+    schedule:
+      interval: daily
+
+  - package-ecosystem: docker
+    directory: /testsuite/features/profiles/temporary/docker_profiles/Docker
+    schedule:
+      interval: daily
+
+  - package-ecosystem: docker
+    directory: /testsuite/features/profiles/temporary/docker_profiles/Docker/authprofile
+    schedule:
+      interval: daily
+
+  - package-ecosystem: docker
+    directory: /testsuite/features/profiles/temporary/docker_profiles/Docker/serverhost
+    schedule:
+      interval: daily
+
+  - package-ecosystem: docker
+    directory: /testsuite/features/profiles/temporary/docker_profiles/cloud_aws/Docker
+    schedule:
+      interval: daily
+
+  - package-ecosystem: docker
+    directory: /testsuite/features/profiles/temporary/docker_profiles/cloud_aws/Docker/authprofile
+    schedule:
+      interval: daily
+
+  - package-ecosystem: docker
+    directory: /testsuite/features/profiles/temporary/docker_profiles/cloud_aws/Docker/serverhost
+    schedule:
+      interval: daily
+
+  - package-ecosystem: docker
+    directory: /testsuite/features/profiles/temporary/docker_profiles/internal_nue/Docker
+    schedule:
+      interval: daily
+
+  - package-ecosystem: docker
+    directory: /testsuite/features/profiles/temporary/docker_profiles/internal_nue/Docker/authprofile
+    schedule:
+      interval: daily
+
+  - package-ecosystem: docker
+    directory: /testsuite/features/profiles/temporary/docker_profiles/internal_nue/Docker/serverhost
+    schedule:
+      interval: daily
+
+  - package-ecosystem: docker
+    directory: /testsuite/features/profiles/temporary/docker_profiles/internal_slc1/Docker
+    schedule:
+      interval: daily
+
+  - package-ecosystem: docker
+    directory: /testsuite/features/profiles/temporary/docker_profiles/internal_slc1/Docker/authprofile
+    schedule:
+      interval: daily
+
+  - package-ecosystem: docker
+    directory: /testsuite/features/profiles/temporary/docker_profiles/internal_slc1/Docker/serverhost
+    schedule:
+      interval: daily
+
+  - package-ecosystem: pip
+    directory: /testsuite/features/upload_files/Redfish-Mockup-Server
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /testsuite
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web
+    schedule:
+      interval: daily
+
+  - package-ecosystem: maven
+    directory: /branding
+    schedule:
+      interval: daily
+
+  - package-ecosystem: maven
+    directory: /java
+    schedule:
+      interval: daily
+
+  - package-ecosystem: maven
+    directory: /microservices/coco-attestation
+    schedule:
+      interval: daily
+
+  - package-ecosystem: maven
+    directory: /microservices/uyuni-java-common
+    schedule:
+      interval: daily
+
+  - package-ecosystem: maven
+    directory: /microservices/uyuni-java-parent
+    schedule:
+      interval: daily
